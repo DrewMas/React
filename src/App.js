@@ -1,27 +1,28 @@
 import './App.css';
-import User from "./components/users/user";
+import User from "./components/user/user";
 import {useState} from "react";
+import Users from "./components/users/users";
 
 
-let usersList = [
-    {name: 'vasya', age: 30, status: false},
-    {name: 'petya', age: 37, status: true},
-    {name: 'kolya', age: 28, status: false},
-    {name: 'olya', age: 32, status: true},
-    {name: 'max', age: 35, status: false},
-    {name: 'anya', age: 23, status: true},
-    {name: 'oleg', age: 26, status: true},
-    {name: 'andrew', age: 26, status: false},
-    {name: 'masha', age: 27, status: false},
-    {name: 'tanya', age: 31, status: true}
-]
+// let usersList = [
+//     {name: 'vasya', age: 30, status: false},
+//     {name: 'petya', age: 37, status: true},
+//     {name: 'kolya', age: 28, status: false},
+//     {name: 'olya', age: 32, status: true},
+//     {name: 'max', age: 35, status: false},
+//     {name: 'anya', age: 23, status: true},
+//     {name: 'oleg', age: 26, status: true},
+//     {name: 'andrew', age: 26, status: false},
+//     {name: 'masha', age: 27, status: false},
+//     {name: 'tanya', age: 31, status: true}
+// ]
 
 // function App() {
 //
 //     let [counter, setCounter] = useState(0);
 //     const increment = () => setCounter(++counter);
 //
-//     let [users, setUsers] = useState(usersList);
+//     let [user, setUsers] = useState(usersList);
 //
 //
 //     // let map = usersList.map((value, index) => {
@@ -31,8 +32,8 @@ let usersList = [
 //     // console.log(map);
 //
 //     const deleteUser = () => {
-//         users.pop();
-//         setUsers([...users]);
+//         user.pop();
+//         setUsers([...user]);
 //     };
 //
 //     return (
@@ -44,7 +45,7 @@ let usersList = [
 //             <div>
 //                 <button onClick={deleteUser}>Delete user</button>
 //                 {
-//                     users.map((value, index) =>
+//                     user.map((value, index) =>
 //                         <User key={index}
 //                               {...value}
 //                         />)
@@ -61,11 +62,11 @@ let usersList = [
 //     let [counter, setCounter] = useState(0);
 //     const increment = () => setCounter(++counter);
 //
-//     let [users, setUsers] = useState(usersList);
+//     let [user, setUsers] = useState(usersList);
 //
 //     const deleteUser = () => {
-//         users.pop();
-//         setUsers([...users]);
+//         user.pop();
+//         setUsers([...user]);
 //     }
 //
 //
@@ -80,7 +81,7 @@ let usersList = [
 //             <div>
 //                 <button onClick={deleteUser}>Delete user</button>
 //                 {
-//                     users.map((value, index) =>
+//                     user.map((value, index) =>
 //                         <User key={index}
 //                               {...value}
 //                         />
@@ -95,24 +96,11 @@ let usersList = [
 
 function App() {
 
-    // let map = usersList.map((value, index) => {
-    //     value.id = index;
-    //     return value;
-    // });
-    //
-    // console.log(map);
 
     let [counter, setCounter] = useState(0);
     const increment = () => setCounter(++counter);
-
-    let [users, setUsers] = useState(usersList);
-
-    const deleteUser = () => {
-        users.pop();
-        setUsers([...users]);
-    };
-
-
+    const decrement = () => setCounter(--counter);
+    const reset = () => setCounter(0);
 
     return (
         <div>
@@ -120,17 +108,14 @@ function App() {
             <div>
                 Counter is {counter}
                 <button onClick={increment}>Increment</button>
+                <button onClick={decrement}>Decrement</button>
+                <button onClick={reset}>Reset</button>
 
             </div>
 
+
             <div>
-                <button onClick={deleteUser}>Delete user</button>
-                {
-                    users.map((value, index) =>
-                        <User key={index}
-                              {...value}
-                        />)
-                }
+                <Users/>
             </div>
         </div>
     );

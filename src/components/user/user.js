@@ -35,3 +35,13 @@ export default function User (props) {
         </div>
     );
 }
+
+// export default function User({item}) {
+//     return (
+//         <div>
+//             <h2>My name is {item.name}</h2>
+//             <p>I'm {item.age} and this is my marriage status - {item.status.toString()}</p>
+//
+//         </div>
+//     );
+// }
