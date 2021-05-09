@@ -1,0 +1,24 @@
+.wrap {
+    display: flex;
+    column-gap: 10px;
+}
+
+.usersBox {
+    border: 2px solid black;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    background: beige;
+}
+
+.singleUserBox {
+    width: 200px;
+    height: fit-content;
+    text-align: center;
+    border: 2px solid darkred;
+    padding: 10px;
+    border-radius: 10px;
+    background: beige;
+
+}
+

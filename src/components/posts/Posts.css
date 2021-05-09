@@ -1,0 +1,24 @@
+
+.wrap {
+    display: flex;
+}
+
+.postsBox {
+    width: 300px;
+    text-align: justify;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    background: beige;
+}
+
+.singePost {
+    width: 400px;
+    height: fit-content;
+    text-align: center;
+    border: 2px solid darkred;
+    padding: 10px;
+    border-radius: 10px;
+    background: beige;
+
+}
