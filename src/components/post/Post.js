@@ -1,5 +1,4 @@
 import './Post.css'
-import {useState} from "react";
 
 export default function Post({item, search}) {
     return (
