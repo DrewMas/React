@@ -52,7 +52,7 @@ import axiosInstance from '../../components/services/api'
 export default function Users() {
 
     let [users, setUsers] = useState([]);
-    let [singleUser, setSingleUser] = useState({});
+    let [singleUser, setSingleUser] = useState(null);
 
     useEffect(() => {
         // fetch('https://jsonplaceholder.typicode.com/users')

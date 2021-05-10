@@ -4,21 +4,23 @@
 }
 
 .usersBox {
-    border: 2px solid black;
-    width: fit-content;
+    box-shadow: 0 0 5px maroon;
+    width: 400px;
     padding: 10px;
     border-radius: 10px;
     background: beige;
+    margin-left: 5px;
 }
 
 .singleUserBox {
-    width: 200px;
+    width: 400px;
     height: fit-content;
     text-align: center;
-    border: 2px solid darkred;
-    padding: 10px;
-    border-radius: 10px;
+    /*border: 2px solid darkred;*/
+    /*padding: 10px;*/
+    /*border-radius: 10px;*/
     background: beige;
+    box-shadow: 0 0 5px burlywood;
 
 }
 

@@ -13,7 +13,7 @@ export default function Comments() {
     }, [])
 
     const search = (id) => {
-        let findComment = comments.map(value => value.id === id)
+        let findComment = comments.find(value => value.id === id)
         setSingleComment(findComment);
         console.log(id)
     }

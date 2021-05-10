@@ -6,7 +6,7 @@ import './Posts.css'
 export default function Posts() {
 
     let [posts, setPosts] = useState([]);
-    let [singlePost, setSingePost] = useState({});
+    let [singlePost, setSingePost] = useState(null);
 
     useEffect(() => {
         axiosInstance.get('/posts').then(value => setPosts(value.data))
@@ -31,7 +31,7 @@ export default function Posts() {
 
             <div className={'singePost'}>
                 {
-                   singlePost ? (<div>{singlePost.body}</div>) : (<div></div>)
+                   singlePost && <p>{singlePost.body}</p>
                 }
             </div>
         </div>

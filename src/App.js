@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import Posts from "./components/posts/Posts";
 import Comments from "./components/comments/Comments";
-
+import './App.css'
 
 export default function App() {
 
@@ -18,11 +18,12 @@ export default function App() {
             {/*<Users/>*/}
 
             <Router>
-                <Link to={'/users'}>To Users</Link>
-                <br/>
-                <Link to={'/posts'}>To Posts</Link>
-                <br/>
-                <Link to={'/comments'}>To Comments</Link>
+                <div className={'router'}>
+                    <button className={'buttonLink'}><Link to={'/users'} className={'link'}>To Users</Link></button>
+                    <button className={'buttonLink'}><Link to={'/posts'} className={'link'}>To Posts</Link></button>
+                    <button className={'buttonLink'}><Link to={'/comments'} className={'link'}>To Comments</Link>
+                    </button>
+                </div>
                 <Switch>
                     <Route path={'/users'} render={() => (<Users/>)}/>
                     <Route path={'/posts'} render={() => (<Posts/>)}/>

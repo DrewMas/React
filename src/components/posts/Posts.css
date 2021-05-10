@@ -4,21 +4,23 @@
 }
 
 .postsBox {
-    width: 300px;
+    width: 400px;
     text-align: justify;
-    border: 2px solid black;
+    box-shadow: 0 0 5px maroon;
     padding: 10px;
     border-radius: 10px;
     background: beige;
+    margin-left: 5px;
 }
 
 .singePost {
     width: 400px;
     height: fit-content;
     text-align: center;
-    border: 2px solid darkred;
-    padding: 10px;
-    border-radius: 10px;
+    /*border: 1px solid darkred;*/
+    /*padding: 10px;*/
+    /*border-radius: 10px;*/
     background: beige;
+    box-shadow: 0 0 5px burlywood;
 
 }
